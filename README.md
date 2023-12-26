@@ -1,4 +1,6 @@
 # Installing HedgeDoc with docker-compose.
+![Screenshot_81](https://github.com/6Ministers/hedgedoc-collaborative-markdown-editor-for-business-idease/assets/11208423/167994e5-8225-42cf-a6ea-42fdca9ea3e8)
+
 
 ## Quick Installation
 
