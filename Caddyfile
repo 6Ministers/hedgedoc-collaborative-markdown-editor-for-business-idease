@@ -1,4 +1,4 @@
-https://hedgedoc.6ministers.com:443 {
+https://hedgedoc.your-domain.com:443 {
     reverse_proxy 127.0.0.1:3000
 #	tls admin@example.org
 	encode zstd gzip
