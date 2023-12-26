@@ -1,0 +1,54 @@
+version: '3.9'
+services:
+  caddy:
+    image: caddy:alpine
+    restart: unless-stopped
+    container_name: caddy
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - ./certs:/certs
+      - ./config:/config
+      - ./data:/data
+      - ./sites:/srv
+    network_mode: "host"
+
+  database:
+    image: postgres:13.4-alpine
+    environment:
+      POSTGRES_DB: hedgedoc
+      POSTGRES_USER: hedgedoc
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - database:/var/lib/postgresql/data
+    networks:
+      - backend
+    restart: always
+  app:
+    image: quay.io/hedgedoc/hedgedoc:1.9.9
+    environment:
+      CMD_DB_DIALECT: postgres
+      CMD_DB_HOST: database
+      CMD_DB_DATABASE: hedgedoc
+      CMD_DB_USERNAME: hedgedoc
+      CMD_DB_PASSWORD: ${DB_PASSWORD}
+      CMD_DOMAIN: ${DOMAIN}
+      CMD_URL_ADDPORT: false
+      CMD_EMAIL: true
+      CMD_ALLOW_EMAIL_REGISTER: true
+      CMD_PROTOCOL_USESSL: true
+      CMD_HSTS_ENABLE: true
+      CMD_CSP_ENABLE: true
+    volumes:
+      - uploads:/hedgedoc/public/uploads
+    ports:
+      - "127.0.0.1:3000:3000"
+    networks:
+      - backend
+    restart: always
+    depends_on:
+      - database
+volumes:
+  database:
+  uploads:
+networks:
+  backend:
