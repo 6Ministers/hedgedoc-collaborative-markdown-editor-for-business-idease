@@ -45,6 +45,9 @@ cd hedgedoc
 
 In the configuration file `.env`, set the following parameters:
 
+Install what you need, documentation:
+
+https://docs.hedgedoc.org/configuration/
 
 
 ``` bash
@@ -56,11 +59,6 @@ CMD_PROTOCOL_USESSL=true
 CMD_HSTS_ENABLE=true
 CMD_CSP_ENABLE=true
 ```
-
-Install what you need, documentation:
-
-https://docs.hedgedoc.org/configuration/
-
 
 To change the domain in the `Caddyfile` to your own
 
