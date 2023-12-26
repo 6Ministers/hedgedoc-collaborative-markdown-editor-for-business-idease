@@ -24,7 +24,7 @@ Install docker and docker-compose:
 curl -s https://raw.githubusercontent.com/6Ministers/hedgedoc-collaborative-markdown-editor-for-business-idease/master/setup.sh | sudo bash -s
 ```
 
-Download Penpot instance:
+Download HedgeDoc instance:
 
 
 ``` bash
