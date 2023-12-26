@@ -2,7 +2,7 @@
 
 ## Quick Installation
 
-**Before starting the instance, direct the domain (subdomain) to the ip of the server where Penpot will be installed!**
+**Before starting the instance, direct the domain (subdomain) to the ip of the server where HedgeDoc will be installed!**
 
 ## 1. HedgeDoc Server Requirements
 From and more
