@@ -79,6 +79,9 @@ docker-compose up -d
 
 Then open `https://hedgedoc.domain.com:` to access HedgeDoc
 
+![Screenshot_80](https://github.com/6Ministers/hedgedoc-collaborative-markdown-editor-for-business-idease/assets/11208423/ed4695cb-0e25-46e5-9329-1f45e3436495)
+
+
 
 ## HedgeDoc container management
 
