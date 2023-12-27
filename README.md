@@ -21,14 +21,14 @@ sudo apt-get purge needrestart
 Install docker and docker-compose:
 
 ``` bash
-curl -s https://raw.githubusercontent.com/6Ministers/hedgedoc-collaborative-markdown-editor-for-business-idease/master/setup.sh | sudo bash -s
+curl -s https://raw.githubusercontent.com/6Ministers/hedgedoc-docker-compose-collaborative-markdown-editor/master/setup.sh | sudo bash -s
 ```
 
 Download HedgeDoc instance:
 
 
 ``` bash
-curl -s https://raw.githubusercontent.com/6Ministers/hedgedoc-collaborative-markdown-editor-for-business-idease/master/download.sh | sudo bash -s hedgedoc
+curl -s https://raw.githubusercontent.com/6Ministers/hedgedoc-docker-compose-collaborative-markdown-editor/master/download.sh | sudo bash -s hedgedoc
 ```
 
 If `curl` is not found, install it:
